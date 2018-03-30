@@ -52,7 +52,6 @@ namespace SatHachBangLaiXe
             this.lbCauHoi = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -280,21 +279,11 @@ namespace SatHachBangLaiXe
             this.label1.TabIndex = 11;
             this.label1.Text = "Tổng Thời Gian 20 Phút:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(329, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "label2";
-            // 
             // FrmThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1285, 773);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbCauHoi);
             this.Controls.Add(this.lbMaDe);
@@ -348,6 +337,5 @@ namespace SatHachBangLaiXe
         private Label label1;
         private DevExpress.XtraEditors.SimpleButton btnChamDiem1;
         private DevExpress.XtraEditors.SimpleButton btnThoat1;
-        private Label label2;
     }
 }

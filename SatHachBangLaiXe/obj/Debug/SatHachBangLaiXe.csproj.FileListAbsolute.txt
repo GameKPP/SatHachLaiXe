@@ -48,7 +48,6 @@ c:\users\user\documents\visual studio 2015\Projects\SatHachBangLaiXe\SatHachBang
 c:\users\user\documents\visual studio 2015\Projects\SatHachBangLaiXe\SatHachBangLaiXe\bin\Debug\ru\DevExpress.Sparkline.v17.1.Core.resources.dll
 c:\users\user\documents\visual studio 2015\Projects\SatHachBangLaiXe\SatHachBangLaiXe\obj\Debug\SatHachBangLaiXe.csprojResolveAssemblyReference.cache
 c:\users\user\documents\visual studio 2015\Projects\SatHachBangLaiXe\SatHachBangLaiXe\obj\Debug\SatHachBangLaiXe.Form1.resources
-c:\users\user\documents\visual studio 2015\Projects\SatHachBangLaiXe\SatHachBangLaiXe\obj\Debug\SatHachBangLaiXe.MENU.resources
 c:\users\user\documents\visual studio 2015\Projects\SatHachBangLaiXe\SatHachBangLaiXe\obj\Debug\SatHachBangLaiXe.Properties.Resources.resources
 c:\users\user\documents\visual studio 2015\Projects\SatHachBangLaiXe\SatHachBangLaiXe\obj\Debug\SatHachBangLaiXe.csproj.GenerateResource.Cache
 c:\users\user\documents\visual studio 2015\Projects\SatHachBangLaiXe\SatHachBangLaiXe\obj\Debug\SatHachBangLaiXe.exe.licenses
@@ -65,3 +64,4 @@ C:\Users\USER\Documents\Visual Studio 2015\Projects\SatHachBangLaiXe\SatHachBang
 C:\Users\USER\Documents\Visual Studio 2015\Projects\SatHachBangLaiXe\SatHachBangLaiXe\bin\Debug\DAL.pdb
 C:\Users\USER\Documents\Visual Studio 2015\Projects\SatHachBangLaiXe\SatHachBangLaiXe\bin\Debug\DTO.pdb
 C:\Users\USER\Documents\Visual Studio 2015\Projects\SatHachBangLaiXe\SatHachBangLaiXe\obj\Debug\SatHachBangLaiXe.FrmThi.resources
+C:\Users\USER\documents\visual studio 2015\Projects\SatHachBangLaiXe\SatHachBangLaiXe\obj\Debug\SatHachBangLaiXe.FrmXemDapAn.resources

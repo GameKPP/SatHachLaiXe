@@ -72,32 +72,7 @@ namespace SatHachBangLaiXe
                         }
                         break;
                     }
-                case Keys.Left:
-                    {
-                        if (CauDangLam > 14 && CauDangLam <= 29)
-                        {
-                            listptl[CauDangLam].setBackColor();
-                            CauDangLam -= 15;
-                            listptl[CauDangLam].setBackColorCDL();
-                            loadcauhoi(this.CauDangLam);
-                            lbCauHoi.Text = "Câu hỏi: " + (CauDangLam + 1);
 
-                        }
-                        break;
-                    }
-                case Keys.Right:
-                    {
-                        if (CauDangLam < 15 && CauDangLam >= 0)
-                        {
-                            listptl[CauDangLam].setBackColor();
-                            CauDangLam += 15;
-                            listptl[CauDangLam].setBackColorCDL();
-                            loadcauhoi(this.CauDangLam);
-                            lbCauHoi.Text = "Câu hỏi: " + (CauDangLam + 1);
-
-                        }
-                        break;
-                    }
             }
 
 
@@ -133,11 +108,9 @@ namespace SatHachBangLaiXe
 
         private void FrmThi_Load(object sender, EventArgs e)
         {
-
             droptable();
             this.CauDaLam = 0;
             if (dethi == null) setdethi();
-
             Screen scr = Screen.PrimaryScreen; //đi lấy màn hình chính
             this.Left = (scr.WorkingArea.Width - this.Width) / 2;
             this.Top = (scr.WorkingArea.Height - this.Height) / 2;
@@ -160,10 +133,7 @@ namespace SatHachBangLaiXe
             len = txt.Length;
             lbSatHachBangLai.Text = "";
             timer1.Start();
-
-
             this.timer2.Start();
-
         }
 
         private void metroButton2_Click(object sender, EventArgs e)
@@ -205,25 +175,24 @@ namespace SatHachBangLaiXe
             sqlcmd = "print dbo.Check_Dap_An()";
             int a = int.Parse(sqlcmd);
             SqlCommand sqlCmd = new SqlCommand(sqlcmd, connDB);
-            try {
-                sqlCmd.ExecuteNonQuery();
-                }
+            try { sqlCmd.ExecuteNonQuery(); }
             catch { }           
             connDB.Close();
             return a;
-
         }
         private void thubai()
         {
             SqlConnection connDB = new SqlConnection(Program.connStr);
             connDB.Open();
             String sqlcmd = "";
+            int k = 1;
             for (int i = 0; i < 30; i++)
             {
 
                 string MsCauHoi = listptl[i].getMsCH();
                 string DapAnofTS = listptl[i].getDapAnTS();
-                sqlcmd = "insert into TTDapAn values ('" + MsCauHoi + "','" + DapAnofTS + "');";
+                sqlcmd = "insert into TTDapAn values ("+k +",'"+ MsCauHoi + "','" + DapAnofTS + "');";
+                k++;
                 SqlCommand sqlCmd = new SqlCommand(sqlcmd, connDB);
                 try { sqlCmd.ExecuteNonQuery(); }
                 catch { }
@@ -274,252 +243,18 @@ namespace SatHachBangLaiXe
 
         private void btnChamDiem1_Click(object sender, EventArgs e)
         {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             thubai();
             MetroFramework.MetroMessageBox.Show(this, "Đã thu bài", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            using (FrmXemDapAn frm = new FrmXemDapAn())
+            {
+                frm.ShowDialog();
+            }
         }
-
+        private int exec()
+        {
+            String query = "print dbo.Check_Dap_An()";
+            return DAL.ConnectDB.ExecuteNonQuery(query);
+        }
         private void btnThoat1_Click(object sender, EventArgs e)
         {
             Application.Exit();

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class ConnectDB
+    public class ConnectDB
     {
 
         public static string connectionString = @"Data Source=PHUCCOI\PHUCCOI;Initial Catalog=THIB2;user=sa;pwd=123456";
@@ -35,8 +35,6 @@ namespace DAL
             }
             catch
             {
-                //  MessageBox.Show("Lỗi thêm thí sinh. Hãy kiểm tra kết nối với máy chủ", "Thông báo");
-
                 return -1;
             }
             SqlCommand dbCmd = new SqlCommand(sqlcmd, dbConn);

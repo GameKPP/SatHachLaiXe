@@ -42,5 +42,13 @@ namespace SatHachBangLaiXe
                 frm.ShowDialog();
             }
         }
+
+        private void metroTile7_Click(object sender, EventArgs e)
+        {
+            using (FrmXemDapAn frm= new FrmXemDapAn())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
